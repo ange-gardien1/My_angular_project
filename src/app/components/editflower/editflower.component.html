@@ -1,0 +1,27 @@
+<div class="one">
+    <br>
+    <h2>Edit Item</h2>
+    <div class="container">
+        <form (ngSubmit)="updateProduct()">
+            <br><br>
+            <table>
+                <tr>
+                    <td><label>Name</label></td>
+                    <td><input type="text" name="Name" [(ngModel)]="editFlower.FlowerName"></td>
+                </tr>
+                <tr>
+                    <td><label>Description</label></td>
+                    <td><input type="text" name="Description" [(ngModel)]="editFlower.description"></td>
+                </tr>
+                <tr>
+                    <td><label>Price</label></td>
+                    <td><input type="text" name="Price" [(ngModel)]="editFlower.price"></td>    
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="submit" class="btn">Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+     <br><br><br>
+</div>

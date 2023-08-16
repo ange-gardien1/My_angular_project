@@ -1,0 +1,90 @@
+
+.container {
+    padding: 20px;
+    background-color: #dde3a8;
+  }
+  
+  .fav, .searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .fav-text h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .fav-button button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .searchBar input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .searchBar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .portal {
+    background: linear-gradient(to bottom, #00416A, #E4E5E6);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  .portal:hover {
+    transform: translateY(-5px);
+  }
+
+  
+  .portal img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .flowerName {
+    margin: 10px 0;
+  }
+  
+  .links button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  #delete {
+    background-color: #dc3545;
+  }
+  #viewbtn{
+    background-color: green;
+  }
+  @media (max-width: 768px) {
+    .parent {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }

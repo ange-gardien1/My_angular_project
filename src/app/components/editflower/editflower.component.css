@@ -1,0 +1,40 @@
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 60vh;
+    padding: 20px;
+    gap: 20px;
+    background-color: #f6f5f3; 
+}
+.btn {
+    background-color: #069319; 
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 38%;
+    margin-top: 10%;
+}
+
+.btn:hover {
+    background-color: #975c19; /* Darker orange color on hover */
+}
+
+
+

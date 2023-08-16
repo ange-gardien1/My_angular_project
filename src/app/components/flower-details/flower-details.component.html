@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="image">
+        <img [src]="detailedFlower.imageUrl" alt="">
+    </div>
+    <div class="text">
+        <h2>{{ detailedFlower.FlowerName }}</h2>
+        <h3>
+            {{detailedFlower.description}}<br><br>
+             
+        </h3>
+        <p>{{detailedFlower.price}}$</p>
+        <button  [routerLink]="['/back']">Back</button>
+        <button [routerLink]="['/Edit',editFlower.id]">Edit</button>
+        <button [routerLink]="['/delete',editFlower.id]"  id="delete">Delete</button>
+    </div>
+</div>

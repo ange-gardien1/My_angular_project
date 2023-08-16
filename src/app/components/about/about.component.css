@@ -1,0 +1,33 @@
+.image-with-description {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-with-description img {
+    max-width: 200px; /* Adjust the size as needed */
+    margin-right: 20px; /* Add spacing between image and description */
+  }
+  
+  .image-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .image{
+    width: 40%;
+  }
+  #photo{
+    margin-top: 10%;
+    width: 500%;
+    margin-left:20%;
+    border-radius: 4%;
+    box-shadow: 0px 10px 15px 0px;
+    padding: 2%;
+
+  }
+  h1{
+    margin-top: 9px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  p{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+  }

@@ -1,0 +1,48 @@
+.add-flower {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  .add-flower h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .add-flower form {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .add-flower label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .add-flower input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  
+  .add-flower button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-flower button:hover {
+    background-color: #2980b9;
+  }

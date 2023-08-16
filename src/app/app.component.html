@@ -1,0 +1,42 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>  
+       
+        <div>
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAzFBMVEX92uBTfEX+3eP/4Ob/3+f/4uf/3eX/4+n+3uPOACzOACpCdTXOAC5OekBDdTbNACdKeD370tnNACP4ytHRHz3PEzbQFzj2wsrsoqzzu8P6z9amp5GFlXPnkJvRIT//6O3MABrz1NfTwbrlzMq+tafeannvrLXhc4LbXG3rnKflhpNsiFz0vsbXSV3ea3rkf43aU2azr52doonTM0vWRFmkpo+Omnx6j2nPv7bcYHDmipbVO1JdgU5bgE3LABTvqbM2cCnIKDwpbBzKAAbqlrNQAAATc0lEQVR4nO1dCVfqSrMN3ZnThAwEEjBBBBLmRIMDoAffuf//P73qBlQQGTx+GlzZ6961jgKxKzXtqm5SHJcjR44cOXLkyJEjR44cOXLkyJHjMBDCAkCC/zCW0U8v56sB0tluvzNKg3KQTqaRH9aw8GukBOVhLwoUQhwGQlSAko7dmnT2QiIkYK4a+qlSKafJdBxF/ZnfC73Q76QKSDnqccJPr/EfIAu42hvPCeiuDLaZEhKk83lgWVal2xMb5iIqq4oTm/inF/o5IMwtxuWS5YDjVYjT9cOqjRsNSZK4oZ9YqhKDa+JwqhJlhs/QVmXJGxNFId3QrzhkGmLkz8H/5n0ThEGyVIsJSWuIQ5LdUcm8Jv/0gk8EEsKJQpRJz2z0LKdvCtiuOOWgXCEWqTJ9IWzPnRSx93qBU7HPS4tCdQRxMxpKMg7/dEwIJfLMAg0G44Vd6ay8DnGBspCX/5o4wU+u91QgHKuEgOKoWkhPWv4y7IU2FmSpv5aQwzN1tvw34lISnU+4AY0QNTJZDsCzSFr/GgC/4Jzq2h6lseWt/o08QsTvX+pnkZJ0uJJLSuPGi4NB3ud6lvuiQq80ekmFOFCr5+KJwlRJ0HqxQuBEHidAVhAkZLudUuCthcJVQl7DC6qUzO9f66eAPGvy6lG468S96STpdkepcmmN3HXiQ5JLVG/9RiT1SXIu1AaPS8NXc0NVlXTtRs1ze77rcSsSKmO8mFiVtYCyYHdI6WyMVJorb3+Uh4FamvtVCbgMlmVECyjkxYFqdTiaKYC2couu6ijh2YRSnK7zwxII9eYltVTpxkC3PS/sxYkDdcW0KrFy0e5NHeIoI/tsBORwUiE+esszZWz3OqlqLVEqlSoJUB1JgMgTpcSpgHzhORWKKCwFTtAfQvhE65CKZCyY3qLn9/tQONlSgxu6cVJWnArQuHJcPbMaUYjVctkh5W7sejYnSJIgYIwFQWo0sGl7Cz9KUgUq4TJ9F+ks8OJ8DHQFYRGQShBUoJRXVBLMRwnFZB44KivyK2VKweHFSRwiLAtnRNfWQGgxDaiaKiAMoEJRXqJCexhKZTL2KRFg1jk6PwlpcEF22OtH3dE8YEI5VHVBOkk6MeRFGwmC/MJIzybVb4FmPup+NEqanEkpGV765EsAYsCz8Tnq8AQIyeyXS4hU97xyxamQvUvv3Fo0pwHPrHOpmnbgGOuTJun5uiFyzcNtUNOanq+EwtSKbGn/e1Cv5J+vG+IxIcq4tjefS8n5VL7vgeNOTAjpoz0imGpwvkYKFpg0ah2VpN6Hpop9JTpTzkaBPCIgyUuJGn8UcXCqeudrpCCiZSNORpFCJuZOOVConLORUsrp0/VLPaVSru6SREhI/6wlRL2AeSD2nArx3osiDxXljAkNw+WCWSeuOuUdIkoJOec4Q4GjYNUCriplsp34wAtJ7ZzjDADZl/EyU+BQLb/bIQxIfNZeSCFE660moU8qyUZelDrntSv6EQJ11a7HkzLpvVGZ0FPU8MxtlAJ5quoy1YErBs5r5BQWKokP0PKMYmsnV/BVNUK0fJAix3nxO8lVneQcBRT51s3DpoxCX3WAmdKOGwnIUomU5ziT8zNREK9euGtub8eDFitKAjIKUcWZYQ4JyE0dkrAWgCiKCP7/ieWeCJEH8R7/XrT496+x4zL0/JpNyqlkhlFAyipt5Yt886pdv61fP7REPtNSijx3dVN4fr5r7pAPIHOx4lQc0g2CMu32l0kQChzfvB5ouqY9A/5q99fNjAopgiLaF7BQo/6BfBSC2S+z7Sba41dSHyGRu9EMQ3u8fWiBuTZb7YvnwUP2PJMqrz5gK21zH8tHgbHXT+b/FwRJ38OY4x8Mo6iBUSPx5VLtgdH6hkUfC9AdBzfe0I2iod1fHWFhCAtSXX9s0GpYvNMK+v2W0/IX9/vv0neC6u6+qBnFQqFQvGkd60FiS9fZPwZGQbveFEfkBoWvXuanwbfuqO4KS+wKnx/C0KghPhYLxrYCW4VC80tX+XmIzQsNpCsaACql/nC8iPxAB0IwKBb0TbtGYv3v4OuX+jmILcMoFAxtcHvdrt9TWbUtFsOJVx9pg78D47w3CsWifvHA8SIDD3nDeL7Oig+KLQ30pt02ecpF+OaFDlrcEAhS/4fmJta1el0vGBf3mq4b9/X21dVD++bx41T6E3gqFopvfI+/1grFNzEQ8lz948WKbR2CjHEPDOimQNM9xTONVf/bRZ8Avk5N9C335EEn2tVLVmuDh338cbENHy8+ss+hVrt+d3d32wbK9r9c8qkwaGjZ8Dt+UFwrkW89Pr5j3m/BJDTWRkxd8CXlZwRgZYXCYCuRXWkFjS6ab979vduvDirhi8IzCf4eMll7a4X8I1WrKF7rz+1D9gYavM2UTb4DGJm2HSn5m6JxzT88aU+HAgZ/A5/PtoA0VRS3lyheG8U7CP/32x2MnR9/zLaEV3qhONheIqrTFG5cHFw6tfGMSyhSCV+T3yrxsYUfISANSRu5M4PYlJBfeSS1PeOIhfOPlM4evhM/ipb+xsz4+0fqeSy+3h/OADTTDArFA/nkp9GkLHTdaxCvtQFEzzugYcfUBeJTQb82jHqWsyFLfQXttdVQMPSiDqXQERqkKjRuQMKtbNray4G+H/zdRsZvFXQIotpRORxUqEFlqG+1YsTrgyzhWyE+6G9jhci1L+5vjyoMmAo5favS4mhxcjiPfiu2SA1w5+NagMDPtSbcn6d3t4NvaxkqnhjvMm5OXxDkQoiid8VdoZR/+JslS6XJTzu9rclfFEFT+nvazl5s/81MD4PGGmMHcTuIpgZMAfjC7pvD15/3NAa+GywlnroeIOdQ+0Mgftrttfx9djpREPt02l47bT1A2CDE6HtcuPicncIYoiJ1xZPW09KMOg/1vf6RGOKDZmSlIQx2atA+cOuEjSKxbmhNyoeKH94X/v4Y8v5NYFVQYW9PbQug9gGNM3vyDFz0XWf558A/sK7w8UmsqRltWoLsSzNwFx6zs38INISKeGzmF9tgpJBI92YZGm6zo8SViMbguMIAcuhAuihuN1q30NIzVf+DV7H9p6Oyhlg0rtl2x943Iwi1X7S6L4HYeqIhVbs7ojBoaXqTqnAXY3sFOGKWzJRWThfMUgsH1UjbF0yF+5cP1NW4zpKE1BmppRa0iwM7Y2Jdv7kvHFIhlTBzTRzUvKeqKerXezfyIdBApjhI1yGdZLARxz8UGMF53Jf+Gc07vCHDP2WymSpytxpb//bRkTfg6XkG47AB6hltpvIrU9VuPjozxFM1H+TV4n5W96PgH1jiMCAS7jZE/XCYWe4u7+wAZAEiutaZjIX2rpDT1A47mMi3nj7VHvku8M075o47Q05TP2Cj9GDqIzX1TO9L8a2Bztzxfchp6vviqMhOYVITKD5n1UiXEPl2ka3zPZF73lMW8lcX7ABZUTcuMsXZdoEeGS2ykLNF5D7M9SL/MFh+RGNHpP73a/xXrEwViNyGGj9wQpDvkVUo+lNmDwi/x8pUjcLhHser5x5zOjU7ELk7janxQP+Tvo/qj54TPif5KPirJVe92MvGH6iumXzftrCvw0qNezaGV7WlPjhL+Sj4q2JxfUJv98v0eFtxJwM6E4jNe/1DEfn6slOXrY3Rk8Hf0DMog/dCiBwV3ng6oaGcUbCG4/uqcNnBOqqBlXmwzvh20lh2IU/dusoq+Ctte5NqqdjHZnba9/8GKs/GZgR/q9FE+XMr+nLQLXH9Gr3+SDdXM36C9jiI/CrTiTSvr3+L6DcXTtixyi741vXdxTX7Jz1htG5ki/fGL4kx6O7ZMHRt+TUt/qmwOiS0FPD8syBztqJxcXP/zA4h8rfGqr80+C0Cim2teM/xPN+6oxKyLijIKg5+i4ly6Km4scfUZCfDlyb6G4IM1dlm45qewNA5JmB2zgT9C8S6sbkJyF/Q8/n0qHtGO/angm5z3r7lZOxLJIXMn9E/Hu82AdHtSsLsnHj6N7DvXmz44R37vvCJp8QyDGqUG4fX+EHhtNNFWQc7CP72K6XsiIL+K9j2GvQrmC95QaRfTC/oWTuA8E9A9PipfsO+p82jhycqYCb3rj8PkZ5LMIyL+nX9rkDb9r9LgxTNInuWxOp5BL+k4t2A2Hw0Cmu822n7JbhZPTXD0N4/VOl3gG5cG7rxeNwXhs4TIs81uSO/MJQjx9eAjnIQPjuGEe16wqWMudruZ+9+PxAWuKHbjzpR73Oft8fLGYBIxgx09AXnjzr9rpuBp5UjjLz+iI4yKqklK/3ETZdrZEqftIft0I+jKIp9N7T9sitJ3uTHHwSNsBx2iGVVOj3PRBLnXn7mAerBCNS26DiXl5fLkU8qKZWCSVCOfnxupVCLHcuazKqrAcyoZh33wbcDrfAowGZsOVM/rJocvGDWfDVxF5658msZ/5Sp4loEZjmz2ULomhGX+kc9FVfypi9zR4RIteNKXGXut3x1YXWxLK/FEtzpD43wEHzVmnp4eZ+F6rTX8JzOMU8cRagz4taTOLFbmk5c/EanUu+y+3qfZHMytn/kmd6IG/3p2OtpaDiectz4v/iYR1PLZpo03FWQRLai9jeSDHatNw8uxVU1bsQ/Mh0BpWn1Zdobnoa12FIXx2hQtkkivQypQqm6OTYAh1b6OrtECC/jRrXzE8/0xlHyeueRfQnxdHrUaGlQyghLo1WQFOJLd+NT8sZkTmFxOZa4yVct+iSY6tuf0KzTrx710F88VOecNA1XoaO2ZdjILJdeJzkK7mVXwhP7J+IMGhLubQw/lrCBigJT6rhrscyt2Isnav91euzCmmA8+qGkb6rBDBKW8BLijwKyHWI3Or1XvW1+WBorrzPWwCMDSJY7Bgp8C1BIgKQ5k2kMZObY+ZKoVil5Utf9aM1CT628cG3sqU6Nmwx/7LHziPO7KVEBpdLkuCGoQAhKrjDa8WbEOLdUVYjXWAdZm6hDc34ibftag4Y1cbbnzqKJcnnU0+Gpk3Hz7UkdWEJmNXSBc0+DspMqyzyCuKC0sOfvq6fXQutNHHjV+yfk2A824U/gonV6w1QXLy8y60Uv7GusTu1301ZwnJI/l6U06fTTShp6K6XhkdoPl5OfN66Jw5j9Wfr46HVlhTlvNSMimTe+TLLNn6qVZXzAfW82Xc/yE9x5D0HOXi0E99S5O5W3lYL6/mJoQixuuI5SXcctISZdf/lUfTyDa65pm9QrQfUi9Txsj6IZu7DMjaP+H3Zj5iSY1r5CPFCavfELKWEsE4gccexGupRW6qtWiCClLRko0LNK4u/ImXTKMX19qKqvI8dDtdxlDAlxCSHVxmr0mhSrToQl/7+Qm0tT9oB6wSNho0eLNjT8k7jBFwzEwLV++oe8rb2l6JLeQmwHRBlim8V7hMcOiQTBBQ7GBOTmTjDcwb5WSkVm5XXgCq5VnEmNLhXbKVE8XGNeAIw9cVIExLXbmNoLZiuS+8eTqhadcil0/EbP6v1rsEFmdJm4tTf5HQnjP/TmSyFR+4kkdWmGRma3QxIMunCY/eBq6qTcDm4i9ZdlFJ44L/NUpdCBH+ivhdBR+yNJ6oTsmklYIbbgKcS0o9qE3g/s/rdohMxMBChueqXP9Bg2gD1rXNsYP4zN0aUPf0yYqUq/MYdiTqICJa4yBwtSltPRBb9beTdFhmMvTJnipAi4zkqbOO46ZfaD5KskbszxgpoFHna5eWkh1SqKK7izlL4DeUDMgdrS+dZJ2HBLO//IKUDVy3BDPnB6YgEHQ2iakLGEhiN6EyV3WlPKJh4S5lqI67q90q5homhYxktBFbW6Cki1iRdZlLciGYyyI8nVEZ3FIvSiRlyC4JM6iYRq/zFL4SrBMI0gmEIVWZU8tfTP08mFaf+NK0FZ76ZWCgkOIpudBuDsNbi14IL9RtfyJK/Choxgb2I3gp1jGmWHyQXGvB7FIixGHFfq0o/Ra5apcaY1Ga7Zk2rWRMKjuGTLEtTM8OdrkTOPaUUjeCMTmU7pQ7Z0vISTdTSkebAaly0yA4cRelMgkT6GWGPLsDJPqFnjxmLcndN1xB0Eul/sMB/Zj1i8rBJ1SVUR14kFvKCBC+wAedYM41pQRXDNIcazki2MqqMp+LovIWnY8VOlKtBI4EdwlyPL//c6EvcV15SxIHN06rlVKvdNLOPatCdhv+Q23KAmyP6Yk2Xwj2jG/ali7CUheMmC7KqthICGIaDjJTZOXhYWCTWI/qiBTaDncM1eYxHYEvI7ILwwnYMFNxQXBGwI1emMkwLFxrJQ7YZUTuVrptIkl1aQpgFtj1bGIVAotOjEpkx9XnE6XC3ueOxGdsawViX2xz5iQgBfew+zzKyxUmLVVK3fcVlPKyz74wiMDw3hmlO45pRdE7lKUkPCNJ2EDX9KrRPH1nzmT/ssSOMg+pJmh+D1p0nSHffdKl6WFDbHjF+uLmyBM2urOmPZWrLtVVqRtzjCErWggaSwFCzrB3Pd9QGeurwmWl1zxUARG/+MbeCB4Azsr3juovrCVHf9iU+A8lCBjbbffmFHoXjgnuJO5HYv4/cfXP9i1zU3AHzoTWbe/94fgRD6C+7s547txUEl5ciRI0eOHDly5MiRI0eOHDly5MiRI0eOHDly5MiRI0eOHDly5MiRI8c/4P8ByD6lTwp8GyAAAAAASUVORK5CYII=" id="logo">
+          
+                
+            
+        </div>
+        
+    </mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/home">Home</a>
+        <a mat-list-item routerLink="/about">About</a>
+        <a mat-list-item routerLink="/products">Products</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span>Soul Flowers</span>
+      </mat-toolbar>
+      <!-- Add Content Here -->
+      <router-outlet></router-outlet>
+           <footer class="footer">
+              <p>@2023 Soul.co</p>
+              <p>website created by pro</p>
+           </footer>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

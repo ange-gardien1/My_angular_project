@@ -1,0 +1,81 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ 
+  .header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 20px;
+    background-color: rgb(109, 92, 123);
+    
+  }
+  
+  .header-logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+    
+  }
+  
+  .header-logo p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .content {
+    
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .portal {
+    margin: 20px;
+    padding: 20px;
+    background-color:  #e9eebb;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    flex: 1 1 calc(25% - 20px);
+    margin: 10px;
+    border: 1px solid 10px;
+  }
+  
+  .portal:hover {
+    transform: translateY(-5px);
+  }
+  
+  .portal-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .flowerName {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .flowerName h3 {
+    font-size: 18px;
+    color: #333;
+  }
